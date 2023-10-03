@@ -5,16 +5,22 @@ const getDate = document.getElementById('date')
 
 const getDateText = document.getElementById('datetext')
 const getFareText = document.getElementById('faretext')
-const handlefare = (e)=>{
+const handlefare = ()=>{
 
     console.log(getDate.value);
     console.log(getfare.value);
    
     getDateText.innerText = getDate.value
     getFareText.innerText = getfare.value
+  
 }
 
 
+// for clearing 
+const handleClear=()=>{
+  getDateText.innerText = '';
+    getFareText.innerText = '';
+}
  
 const generateRecipient =()=>{
  

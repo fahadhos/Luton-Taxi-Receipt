@@ -26,5 +26,5 @@ const generateRecipient =()=>{
  
 const element = document.getElementById('pdf')
 console.log(element);
-html2pdf().from(element).save()
+html2pdf().from(element).save('money-invoice')
 }

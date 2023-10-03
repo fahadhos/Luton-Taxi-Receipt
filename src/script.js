@@ -18,8 +18,8 @@ const handlefare = ()=>{
 
 // for clearing 
 const handleClear=()=>{
-  getDateText.innerText = '';
-    getFareText.innerText = '';
+  getDateText.innerText = '...........................';
+    getFareText.innerText = '...........................';
 }
  
 const generateRecipient =()=>{

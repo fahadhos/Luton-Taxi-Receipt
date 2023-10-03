@@ -9,12 +9,28 @@ const handlefare = ()=>{
 
     console.log(getDate.value);
     console.log(getfare.value);
+    console.log(isNaN(getfare.value));
+   if(!isNaN(getfare.value)  )
+   {
+       getFareText.innerText = getfare.value
+
+   }
+   else
+   {
+       
+       console.log("This code will run after 3000 milliseconds (3 seconds).");
+       document.getElementById('msg-box').classList.remove('hidden')
+       document.getElementById('msg').innerText='Please enter a number only'
+    setTimeout(function() {
+       document.getElementById('msg-box').classList.add('hidden')
+    }, 1000);
    
+    // console.log('Please enter a number only');
+   }
     getDateText.innerText = getDate.value
-    getFareText.innerText = getfare.value
   
 }
-
+ 
 
 // for clearing 
 const handleClear=()=>{

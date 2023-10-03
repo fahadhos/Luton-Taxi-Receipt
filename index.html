@@ -59,10 +59,13 @@
           <span>Fare</span>
           <input id="fare" name="'fare"  type="text" placeholder="Enter fare" class="input input-bordered" />
         </label>
-        <button class="btn m-10 bg-green-600 capitalize text-white"
-         onclick="handlefare()">Submit</button>
-        <button class="btn btn-warning  m-10  capitalize text-white"
-         onclick="handleClear()">Clear All</button>
+        <div class="flex flex-col mx-auto justify-center items-center text-center">
+
+          <button class="btn m-10 w-full bg-green-600 capitalize text-white"
+           onclick="handlefare()">Submit</button>
+          <button class="btn btn-warning    capitalize text-white"
+           onclick="handleClear()">Clear All</button>
+        </div>
     </div>
     <!-- price field -->
     
@@ -97,7 +100,7 @@
                     <p id="datetext"  > ......................... </p>
               </label>
               <label class="label text-2xl   ">
-                  <span class="label-text mr-1 text-2xl "> Fare:</span> 
+                  <span class="label-text mr-1 text-2xl "> Fare: £</span> 
                   <p id="faretext"  class="font-bold"  > ...........................  </p>
                     
               </label>

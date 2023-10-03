@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luton Taxi Recipt </title>
+    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.2/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body class="overflow-x-hidden mx-auto ">
+    
+
+    <!-- Banner page -->
+     <section class="mx-auto my-0 max-sm:w-[390px]  ">
+
+        <div class="hero max-h-screen  mx-auto" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-md">
+                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                <p class="mb-5"> Welcome to Luton Taxis Ltd.
+                </p>
+                <button class="btn btn-primary">Get Started</button>
+              </div>
+            </div>
+          </div>
+     </section>
+<!-- banner end -->
+
+
+
+<!-- User input section -->
+<section class="bg-slate-300 max-sm:w-[390px] p-10  grid place-content-center  mx-auto"  >
+
+<div class="card max-sm:w-[20rem] max-sm:pl-10 grid place-content-center   bg-base-100 shadow-sm p-10  mx-auto ">
+
+    <!-- Date picker -->
+    <div  class="form-control mx-auto ">
+        <label class="label">
+          <span class="label-text">Enter Date</span>
+        </label>
+        <label class="input-group">
+          <span>Date</span>
+          <input id="date" name="'date"  type="date" placeholder="Enter fare" class="input input-bordered" />
+          <!-- <button class="btn" onclick="handlefare(this)">Submit</button> -->
+        </label>
+      </div>
+    <!-- Date picker -->
+    <!-- price field -->
+    <div class="form-control">
+        <label class="label">
+            <span class="label-text">Enter amount</span>
+        </label>
+        <label class="input-group">
+          <span>Fare</span>
+          <input id="fare" name="'fare"  type="text" placeholder="Enter fare" class="input input-bordered" />
+        </label>
+        <button class="btn m-10 bg-green-600 capitalize text-white" onclick="handlefare(this)">Submit</button>
+    </div>
+    <!-- price field -->
+    
+</div>
+</section>
+
+<!-- User input section -->
+
+
+<!-- generated text display here  -->
+<section id="pdf" class="grid place-content-center  mx-auto">
+
+    <div class="card max-sm:w-[22rem]   w-[44rem] bg-base-100 shadow-xl  ">
+        <div class=" m-10  " style="border: 1px solid; margin: 10px;">
+
+
+            <h2 class="font-bold text-2xl   max-sm:text-sm mt-10 pl-5 z-10 relative"> The Convenient & Quick Service</h2>
+            <!-- big border -->
+            <span class="divider  w-[17rem] max-sm:w-[10rem] ml-5 text-3xl max-sm:text-sm " style="border: 2px solid gray;background-color: gray;"></span>
+            <!-- small right border -->
+            <span class="divider w-[26rem] max-sm:w-[13rem]
+              max-sm:ml-[6rem]
+            ml-[16rem] font-bold text-black relative -top-9 "></span>
+            <figure class="px-10 pt-10 relative -top-[8rem] left-[14rem] max-sm:left-[7rem] ">
+              <img class="w-24 max-sm:w-14"  src="/images/luton-taxis-logo.png" alt="logo" class="rounded-xl" />
+            </figure>
+            <h2 class="font-bold text-sm -top-[8rem] max-sm:-top-[6rem]  pl-6 z-10 relative"> All Major Credit Cards Accepted</h2>
+            <div  class="card-body   text-left relative -top-[6rem] max-sm:text-sm">
+                <label class="label text-left text-2xl max-sm:text-sm">
+                    <span class="label-text mr-1 text-2xl max-sm:text-sm"> Date:</span> 
+                      <p id="datetext"  > ......................... </p>
+                </label>
+                <label class="label text-2xl max-sm:text-sm ">
+                    <span class="label-text mr-1 text-2xl max-sm:text-sm"> Fare:</span> 
+                    <p id="faretext"   > ...........................  </p>
+                      
+                </label>
+                <label class="label text-2xl">
+                    <span class="label-text mr-1 text-2xl max-sm:text-sm"> Signature:</span> 
+                 <img class="h-12" src="/images/signforhad.jpeg" alt="">   <p id="faretext" class=" font-serif max-sm:text-sm">   Thank You </p>
+                      
+                </label>
+                <label class="label">
+                    <span class="label-text mr-1 text-2xl font-extrabold">(+44) 7860 856075</span> 
+                   
+                      
+                </label>
+                <figure class="px-10 pt-10 relative -top-[2rem] left-[14rem]
+                max-sm:left-[4rem] flex-col">
+                    <img class="w-24"  src="/images/car.jpg" alt="logo" class="rounded-xl" />
+                    <caption>
+                        Travel Safe & in style
+                    </caption>
+                  </figure>
+            </div>
+        </div>
+      </div>
+</section>
+
+<section class="print-btn grid place-content-center p-10 mx-auto">
+    <div class="card-actions">
+        <!-- print button will generate pdf -->
+      <button onclick="generateRecipient()" class="btn btn-primary">Print Now</button>
+    </div>
+</section>
+<!-- Add an iframe to display the PDF -->
+<!-- <iframe id="pdfViewer" width="100%" height="500"></iframe> -->
+
+<!-- generated text display here  -->
+ 
+ 
+   <!-- Creating an HTML element to be converted to a PDF -->
+   <!-- <div id="download" style="width: 500px;">
+    <p class="border text-red-500">Hi</p>
+    <p>Printing this :)</p>
+    <img src="/images/luton-taxis-logo.png" alt="">
+    <h1>This should show up in my pdf</h1> -->
+
+ 
+
+    <!-- <button   id="downloadButton">Click to download</button> -->
+<!-- </div> -->
+ 
+<!-- Adding a script to listen for the button click event and to convert the HTML element to a PDF and download it -->
+
+<!-- <script>
+
+    window.onload = function() {
+document.getElementById('downloadButton')
+.addEventListener('click', ()=>{
+
+    const invoice = this.document.getElementById('download')
+    console.log(invoice);
+ 
+    html2pdf().from(invoice).save();
+ 
+})
+
+    }
+ </script> -->
+
+
+
+
+
+<!-- footer -->
+<section   class=" grid place-content-center bg-black text-white">
+<footer className="footer footer-center p-4 bg-base-300 text-base-content">
+  <aside>
+    <p>Copyright © 2023 - All right reserved by Luton Taxis Ltd <br> <small>developed by @fahadhosk</small> </p>
+  </aside>
+</footer>
+</section>
+
+<!-- footer -->
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+<!-- jsPDF library --> 
+<!-- jsPDF-AutoTable -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.7/jspdf.plugin.autotable.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../tailwind.config.js"></script>
+
+ 
+
+
+<script src="script.js"></script>
+</html>

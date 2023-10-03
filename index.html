@@ -11,7 +11,7 @@
 
     <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
-<body class="overflow-x-hidden mx-auto ">
+<body class="overflow-x-hidden mx-auto font-sans ">
     
 
     <!-- Banner page -->
@@ -24,7 +24,7 @@
                 <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
                 <p class="mb-5"> Welcome to Luton Taxis Ltd.
                 </p>
-                <button class="btn btn-primary">Get Started</button>
+                <button class="btn btn-primary capitalize">Get Started</button>
               </div>
             </div>
           </div>
@@ -45,20 +45,28 @@
         </label>
         <label class="input-group">
           <span>Date</span>
-          <input id="date" name="'date"  type="date" placeholder="Enter fare" class="input input-bordered" />
+          <input id="date" name="'date"  type="date" placeholder="Enter fare" class="input input-bordered" required />
           <!-- <button class="btn" onclick="handlefare(this)">Submit</button> -->
         </label>
       </div>
     <!-- Date picker -->
     <!-- price field -->
     <div class="form-control">
+      
         <label class="label">
             <span class="label-text">Enter amount</span>
         </label>
         <label class="input-group">
           <span>Fare</span>
-          <input id="fare" name="'fare"  type="text" placeholder="Enter fare" class="input input-bordered" />
+          <input id="fare" name="'fare"  type="text" placeholder="Enter fare" class="input input-bordered"  required/>
         </label>
+        <!-- message wARNING -->
+       <div id="msg-box" class="hidden m-3">
+        <div class="alert alert-warning">
+          <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+          <span id="msg"> </span>
+        </div>
+       </div>
         <div class="flex flex-col mx-auto justify-center items-center text-center">
 
           <button class="btn m-10 w-full bg-green-600 capitalize text-white"
@@ -79,47 +87,62 @@
 <section class="overflow-auto scroll-pl-6 snap-x max-sm:ml-10 max-sm:w-fit">
  <section id="pdf" class="grid place-content-center  mx-auto ">
 
-  <div class="card   w-[44rem] bg-base-100 shadow-xl  ">
-      <div class=" m-10  " style="border: 1px solid; margin: 10px;">
+  <div class="card h-[33rem]   w-[44rem] bg-base-100 shadow-xl  ">
+    <!-- black page border bellow -->
+      <div class=" m-10  " style="border: 2px solid; margin: 20px;height: 29rem;">
 
 
           <h2 class="font-bold text-2xl    mt-10 pl-5 z-10 relative"> The Convenient & Quick Service</h2>
           <!-- big border -->
-          <span class="divider  w-[17rem]   ml-5 text-3xl  " style="border: 2px solid gray;background-color: gray;"></span>
+          <span class="divider  w-[17rem]   ml-5 text-3xl  "
+           style="border: 2px solid gray;background-color: gray;"></span>
           <!-- small right border -->
-          <span class="divider w-[26rem] 
+          <span class="divider w-[24rem] 
             
           ml-[16rem] font-bold text-black relative -top-9 "></span>
-          <figure class="px-10 pt-10 relative -top-[8rem] left-[14rem]   ">
-            <img class="w-24 max-sm:w-14"  src="/images/luton-taxis-logo.png" alt="logo" class="rounded-xl" />
+          <figure class="px-10 pt-10 relative -top-[10.5rem] left-[14rem]   ">
+            <img class="w-[15rem] "  src="/images/mainLogo.png" alt="logo" class="rounded-xl" />
           </figure>
-          <h2 class="font-bold text-sm -top-[8rem] max-sm:-top-[6rem]  pl-6 z-10 relative"> All Major Credit Cards Accepted</h2>
-          <div  class="card-body   text-left relative -top-[6rem] ">
+         
+          <h2 class="font-bold text-xl -top-[12rem]   pl-10 z-10 relative"> 
+            All Major Credit Cards Accepted</h2>
+            <!-- DAte section -->
+          <div  class="card-body   text-left relative -top-[13rem] ">
               <label class="label text-left text-2xl  ">
-                  <span class="label-text mr-1 text-2xl  "> Date:</span> 
-                    <p id="datetext"  > ......................... </p>
+                  <span class="label-text mr-1 text-2xl  font-semibold "> Date:</span> 
+                    <p id="datetext" class="font-bold"  > ............................. </p>
               </label>
               <label class="label text-2xl   ">
-                  <span class="label-text mr-1 text-2xl "> Fare: £</span> 
+                  <span class="label-text mr-1 text-2xl font-semibold"> Fare: £</span> 
                   <p id="faretext"  class="font-bold"  > ...........................  </p>
                     
               </label>
-              <label class="label text-2xl">
-                  <span class="label-text mr-1 text-2xl  "> Signature:</span> 
-               <img class="h-12" src="/images/signforhad.jpeg" alt="">  
-                <p id="faretext" class=" font-serif  ">   Thank You </p>
+            
+              <label class="label text-2xl ">
+                  <span class="label-text mr-1 text-2xl  "> <i> Signature:</i> </span> 
+               <img class="h-12  " src="/images/signforhad.jpeg" alt="sign">
+               <span class="relative font-bold -left-[8rem]">......................</span>  
+                <p id="faretext" class=" font-serif font-bold -left-[5rem] relative ">  <i>Thank You </i> </p>
                     
               </label>
-              <label class="label">
-                  <span class="label-text mr-1 text-2xl font-extrabold">(+44) 7860 856075</span> 
-                 
+              <label class="label inline-block">
+                  <span class="label-text mr-1 text-2xl font-extrabold">
+                    (+44) 01582 -735555 <br></span>    
+                  <span class="text-left text-xl font-semibold label-text">
+                 www.lutontaxis.com
+<br>
+Email:admin@lutontaxis.com   
+ </span>              
                     
               </label>
-              <figure class="px-10 pt-10 relative -top-[2rem] left-[14rem]
+              <figure class=" relative -top-[19rem] left-[11rem]   ">
+                <img class="w-[12rem] -pr-3"  src="/images/wheelchair.jpg" alt="logo" class="rounded-xl" />
+              </figure>
+              <figure class="px-10 pt-10 relative -top-[16rem] left-[14rem]
               flex-col">
-                  <img class="w-24"  src="/images/car.jpg" alt="logo" class="rounded-xl" />
+                  <img class="w-24"  src="/images/bottomcar.jpg" alt="logo" class="rounded-xl" />
                   <caption>
-                      Travel Safe & in style
+                    <span  class="font-extrabold">  Travel Safe & in style</span>
                   </caption>
                 </figure>
           </div>
